@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<!-- saved from url=(0044)https://hackingcpp.com/cpp/cheat_sheets.html -->
+<html lang="en-US"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style>
+    .utterances {
+      position: relative;
+      box-sizing: border-box;
+      width: 100%;
+      max-width: 760px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .utterances-frame {
+      color-scheme: light;
+      position: absolute;
+      left: 0;
+      right: 0;
+      width: 1px;
+      min-width: 100%;
+      max-width: 100%;
+      height: 100%;
+      border: 0;
+    }
+  </style>
+
+<meta http-equiv="expires" content="86400">
+<!--<base href="https://hackingcpp.com/">--><base href=".">
+<link rel="preload" as="style" href="./C++ Cheat Sheets &amp; Infographics _ hacking C++_files/style-r64.css">
+<link rel="preload" as="style" href="./C++ Cheat Sheets &amp; Infographics _ hacking C++_files/all.css">
+<link rel="icon" href="https://hackingcpp.com/favicon.ico">
+<link rel="icon" href="https://hackingcpp.com/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="https://hackingcpp.com/apple-touch-icon.png">
+<link rel="stylesheet" type="text/css" href="./C++ Cheat Sheets &amp; Infographics _ hacking C++_files/style-r64.css">
+<link rel="stylesheet" type="text/css" href="./C++ Cheat Sheets &amp; Infographics _ hacking C++_files/all.css">
+<link rel="home" href="https://hackingcpp.com/">
+
+<link rel="alternate" type="application/rss+xml" title="RSS" href="https://hackingcpp.com/feed.rss">
+<title>C++ Cheat Sheets &amp; Infographics | hacking C++</title>
+<meta name="description" content="Graphics and cheat sheets, each capturing one aspect of C++: algorithms/containers/STL, language basics, libraries, best practices, terminology (信息图表和备忘录).">
+<meta name="keyword" content="tips info pictures images graphics">
+<meta name="author" content="André Müller">
+<meta name="date" content="2023-03-22">
+<meta name="copyright" content="2019-2023 André Müller">
+<meta name="theme-color" content="#0070C0">
+<meta property="og:title" content="C++ Cheat Sheets &amp; Infographics">
+<meta property="og:description" content="Graphics and cheat sheets, each capturing one aspect of C++: algorithms/containers/STL, language basics, libraries, best practices, terminology (信息图表和备忘录).">
+<meta property="og:image" content="https://hackingcpp.com/cpp/cheat_sheets_card.png">
+<meta property="og:url" content="https://hackingcpp.com/cpp/cheat_sheets.html">
+<meta property="og:site_name" content="hacking C++">
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="C++ Cheat Sheets &amp; Infographics">
+<meta name="twitter:description" content="Graphics and cheat sheets, each capturing one aspect of C++: algorithms/containers/STL, language basics, libraries, best practices, terminology (信息图表和备忘录).">
+<meta name="twitter:image" content="https://hackingcpp.com/cpp/cheat_sheets_card.png">
+<meta name="twitter:image:alt" content="">
+<meta name="twitter:site" content="@hackingcpp">
+<meta name="twitter:creator" content="@hackingcpp">
+<meta name="hcpp-page-category" content="cat-gallery">
+<meta name="hcpp-tags" content="C++ gallery list ">
+</head>
+<body>
+<div id="top-nav"><div id="titlebar" class="boxed-xwide"><div id="main-branding"><a href="https://hackingcpp.com/index.html" id="main-logo" rel="home" title="home"><div class="hwide"><img src="./C++ Cheat Sheets &amp; Infographics _ hacking C++_files/hcpp.svg" alt="h/cpp" style="height:40px; width:90px;"></div>
+<div class="hslim"><img src="./C++ Cheat Sheets &amp; Infographics _ hacking C++_files/hcpp-square.svg" alt="h/cpp" style="height:40px; width:48px;"></div></a>
+
+<div id="main-title"><a href="https://hackingcpp.com/index.html" rel="home" title="home">hacking&nbsp;C++</a>
+</div></div>
+<div id="main-menu"><div class="entry "><a href="https://hackingcpp.com/tags/news.html">News</a></div>
+<div class="submenu "><a>Learning</a><div class="submenu-dropdown"><a href="https://hackingcpp.com/cpp/beginners_guide.html">Beginner's Guide to C++</a>
+
+<hr>
+<a href="https://hackingcpp.com/cpp/std/containers.html">Standard Library Containers</a>
+
+<a href="https://hackingcpp.com/cpp/std/algorithms.html">Standard Library Algorithms</a>
+
+<hr>
+<a href="https://hackingcpp.com/cpp/cheat_sheets.html">Cheat Sheets / Infographics</a>
+
+<a href="https://hackingcpp.com/tags/recipe.html">All Recipes</a>
+
+<a href="https://hackingcpp.com/tags/article.html">All Articles</a>
+
+<hr>
+<a href="https://hackingcpp.com/dev/web_learning.html">Online Learning</a>
+
+<a href="https://hackingcpp.com/cpp/educational_videos.html">Educational Videos</a>
+
+<a href="https://hackingcpp.com/cpp/books.html">Books</a>
+</div></div>
+<div class="submenu "><a>Links</a><div class="submenu-dropdown"><a href="https://hackingcpp.com/cpp/community.html">Community Resources</a>
+
+<a href="https://hackingcpp.com/cpp/tools/ecosystem.html">Tools Ecosystem</a>
+
+<hr>
+<a href="https://hackingcpp.com/tags/list.html">All Resource Lists</a>
+
+<hr>
+<a href="https://hackingcpp.com/dev/vim_plugins.html">VIM Plugins</a>
+</div></div>
+<div class="submenu "><a>About</a><div class="submenu-dropdown"><a href="https://hackingcpp.com/about.html">Why &amp; Who</a>
+
+<a href="https://hackingcpp.com/privacy.html">Privacy</a>
+</div></div></div>
+<div id="main-socialbar"><a href="https://twitter.com/hackingcpp" target="_blank"><span class="cat-twitter"></span></a>
+</div>
+<div class="navlinks" id="nav-path"></div>
+<div id="searchbar"><div id="searchbox"><input id="search-input">
+<button id="search-clear" aria-label="Clear Search"></button>
+<button id="search-run" aria-label="Run Search"></button>
+<button id="search-close" aria-label="Close Search"></button></div></div>
+<div class="hamburger " id="main-hamburger"><button aria-label="Main Menu"></button><div class="hamburger-dropdown"><a onclick="collapse_all_major_folds()" class="ctrl-nav-collapse-all">Collapse <strong>All</strong> Levels</a>
+<a onclick="collapse_major_folds()" class="ctrl-nav-collapse">Collapse Top Level</a>
+<a onclick="expand_major_folds()" class="ctrl-nav-expand">Expand Top Level</a>
+<a onclick="expand_all_major_folds()" class="ctrl-nav-expand-all">Expand <strong>All</strong> Levels</a>
+<hr>
+<a href="https://hackingcpp.com/tags/news.html" class="cat-news">News</a>
+
+<a href="https://hackingcpp.com/tags/article.html" class="cat-article">Articles</a>
+
+<a href="https://hackingcpp.com/tags/recipe.html" class="cat-recipe">Recipes</a>
+
+<a href="https://hackingcpp.com/cpp/beginners_guide.html" class="cat-guide">Beginner's Guide to C++</a>
+
+<a href="https://hackingcpp.com/tags/list.html" class="cat-list">Lists</a>
+
+<hr>
+<a href="https://twitter.com/hackingcpp" target="_blank"><span class="cat-twitter"></span> @hackingcpp</a>
+
+<a href="https://hackingcpp.com/feed.rss" class="cat-rss" target="_blank">RSS Feed</a>
+
+<a href="https://hackingcpp.com/about.html" class="cat-about">About</a>
+
+<a href="https://hackingcpp.com/privacy.html" class="cat-contact">Privacy</a>
+
+<a href="https://hackingcpp.com/index.html" class="cat-home" rel="home">Home</a>
+</div></div></div>
+<nav id="guide-bar" class="boxed-xwide"></nav></div>
+<div id="drawer-top" class="boxed-xwide"><div id="search-results"><div id="search-header"><h2 class="cat-search" id="search-title"></h2></div>
+<div id="search-locations"><ul class="resources" id="search-location-items"></ul></div>
+<div id="search-footer"></div></div></div>
+
+<div id="main-content" class="boxed-xwide "><article class="extended-fold-controls" id="nav-area">
+<header class="plain">
+<a class="nav" id="nav-roota" rel="nofollow"></a><h1 id="nav-root"><span class="hwide">Cheat Sheets &amp; Infographics</span> <span class="hslim">Cheat Sheets &amp; Infographics</span> <span class="hnavi">Cheat Sheets</span></h1>
+<nav id="page-navbar" class=""><div class="navlinks"><div class="nav-level2"><div class="nav-bcrumb"><a class="bcrumb" href="https://hackingcpp.com/cpp/cheat_sheets.html#hfold0a" onclick="open_fold_for_id(&#39;hfold0&#39;)"><span class="nav-none">Standard </span>Algorithms</a></div></div><div class="nav-level2"><div class="nav-bcrumb"><a class="bcrumb" href="https://hackingcpp.com/cpp/cheat_sheets.html#hfold1a" onclick="open_fold_for_id(&#39;hfold1&#39;)"><span class="nav-none">Standard </span>Views</a></div></div><div class="nav-level2"><div class="nav-bcrumb"><a class="bcrumb" href="https://hackingcpp.com/cpp/cheat_sheets.html#hfold2a" onclick="open_fold_for_id(&#39;hfold2&#39;)"><span class="nav-none">Standard </span>Containers</a></div></div><div class="nav-level2"><div class="nav-bcrumb"><a class="bcrumb" href="https://hackingcpp.com/cpp/cheat_sheets.html#hfold3a" onclick="open_fold_for_id(&#39;hfold3&#39;)"><span class="nav-none">Standard </span>Randomness</a></div></div><div class="nav-level2"><div class="nav-bcrumb"><a class="bcrumb" href="https://hackingcpp.com/cpp/cheat_sheets.html#hfold4a" onclick="open_fold_for_id(&#39;hfold4&#39;)"><span class="nav-none">Standard </span>Utilities</a></div></div><div class="nav-level2"><div class="nav-bcrumb"><a class="bcrumb" href="https://hackingcpp.com/cpp/cheat_sheets.html#hfold5a" onclick="open_fold_for_id(&#39;hfold5&#39;)">Language<span class="nav-none"><span class="hwide"> Rules &amp;</span> Mechanisms</span></a></div></div><div class="nav-level2"><div class="nav-bcrumb"><a class="bcrumb" href="https://hackingcpp.com/cpp/cheat_sheets.html#hfold6a" onclick="open_fold_for_id(&#39;hfold6&#39;)"><span class="hwide">Non-Standard </span>Libraries</a></div></div><div class="nav-level2"><div class="nav-bcrumb"><a class="bcrumb" href="https://hackingcpp.com/cpp/cheat_sheets.html#hfold7a" onclick="open_fold_for_id(&#39;hfold7&#39;)">Design<span class="nav-none"> Guidelines</span></a></div></div><div class="nav-level2"><div class="nav-bcrumb"><a class="bcrumb" href="https://hackingcpp.com/cpp/cheat_sheets.html#hfold8a" onclick="open_fold_for_id(&#39;hfold8&#39;)">Engineering</a></div></div><div class="nav-level2"><div class="nav-bcrumb"><a class="bcrumb" href="https://hackingcpp.com/cpp/cheat_sheets.html#hfold9a" onclick="open_fold_for_id(&#39;hfold9&#39;)">Terminology</a></div></div><div class="global-controls"><button class="ctrl-nav-collapse" title="collapse all levels"></button><button class="ctrl-nav-expand" title="expand top level sections"></button></div></div></nav>
+</header>
+<section class="main plain"><a class="nav " id="stdlib" rel="nofollow" keywords="stdlib std standard library conventions"></a>
+<a class="nav" id="hfold0a" rel="nofollow"></a><h2 class="hfold hfold-header" open="" id="hfold0"><span class="nav-none">Standard </span>Algorithms<div class="controls"><button class="ctrl-nav-collapse" title="collapse child sections"></button><button class="ctrl-nav-expand" title="expand child sections"></button></div></h2>
+<div class="content hfold-content plain" style="display: block;"><a class="nav " id="std-algorithms" rel="nofollow" keywords="std-algorithms "></a>
+<div class="panel-fold panel-fold-header" open="" id="panel-fold0"><a class="nav" id="panel-fold0a" rel="nofollow"></a><h3><span class="nav-none">Quick </span>Overview</h3></div>
+<div class="panel bg-filled vcompact panel-fold-content" style="display: block;"><div class="block "><a class="img hcentered" href="https://hackingcpp.com/cpp/std/algorithms.png">
+<img src="./C++ Cheat Sheets &amp; Infographics _ hacking C++_files/algorithms_crop.png" style="max-width:100%;" title="click for fullscreen view" alt="standard library algorithms overview sheet with visual examples for many algorithms" loading="lazy">
+
+</a></div>
+<div class="panel fit-content"><ul class="resources "><li class="cat-overview"><a href="https://hackingcpp.com/cpp/std/algorithms.html">Algorithms Overview Page</a></li>
+
+<li class="cat-overview"><a href="https://hackingcpp.com/cpp/std/range_algorithms.html">C++20 Single Range Object Algorithms Overview Page</a></li>
+</ul></div></div>
+<div class="panel-fold panel-fold-header" open="" id="panel-fold1"><a class="nav" id="panel-fold1a" rel="nofollow"></a><h3><span class="nav-none">Algorithms </span>Gallery<span class="if-closed">…</span></h3><div class="controls"><button class="ctrl-nav-collapse" title="collapse child sections"></button><button class="ctrl-nav-expand" title="expand child sections"></button></div></div>
+<div class="panel-col panel-fold-content" style="display: block;"><div class="panel-fold panel-fold-header" id="panel-fold2"><a class="nav" id="panel-fold2a" rel="nofollow"></a><h4>Non-Modifying<span class="nav-none"> Operations</span></h4></div>
+<div class="panel bg-filled no-padding panel-fold-content" style="display: block;"><div class="grid-gallery-M no-stretch"><a class="img hcentered" href="./C++ Cheat Sheets &amp; Infographics _ hacking C++_files/gallery-existence_queries.png">
+<img src="./C++ Cheat Sheets &amp; Infographics _ hacking C++_files/gallery-existence_queries.png" style="max-width:100%;" title="click for fullscreen view" alt="C++ standard library visual overview of existence query algorithms" loading="lazy">
+
+</a>
+<a class="img hcentered" href="./C++ Cheat Sheets &amp; Infographics _ hacking C++_files/gallery-find_single.png">
+<img src="./C++ Cheat Sheets &amp; Infographics _ hacking C++_files/gallery-find_single.png" style="max-width:100%;" title="click for fullscreen view" alt="C++ standard library visual overview of algorithms for finding single elements in sequences" loading="lazy">
+
+</a>
+<a class="img hcentered" href="./C++ Cheat Sheets &amp; Infographics _ hacking C++_files/gallery-ranges-find_single.png">
+<img src="./C++ Cheat Sheets &amp; Infographics _ hacking C++_files/gallery-ranges-find_single.png" style="max-width:100%;" title="click for fullscreen view" alt="C++ 20/23 standard library visual overview of algorithms for finding single elements in sequences" loading="lazy">
+
+</a>
+<a class="img hcentered" href="./C++ Cheat Sheets &amp; Infographics _ hacking C++_files/gallery-find_runs.png">
+<img src="./C++ Cheat Sheets &amp; Infographics _ hacking C++_files/gallery-find_runs.png" style="max-width:100%;" title="click for fullscreen view" alt="C++ standard library visual overview of algorithms for finding runs of equivalent elements in sequences" loading="lazy">
+
+</a>
+<a class="img hcentered" href="./C++ Cheat Sheets &amp; Infographics _ hacking C++_files/gallery-find_subranges.png">
+<img src="./C++ Cheat Sheets &amp; Infographics _ hacking C++_files/gallery-find_subranges.png" style="max-width:100%;" title="click for fullscreen view" alt="C++ standard library visual overview of algorithms for finding subranges in sequences" loading="lazy">
+
+</a>
+<a class="img hcentered" href="./C++ Cheat Sheets &amp; Infographics _ hacking C++_files/gallery-compare_ranges.png">
+<img src="./C++ Cheat Sheets &amp; Infographics _ hacking C++_files/gallery-compare_ranges.png" style="max-width:100%;" title="click for fullscreen view" alt="C++ standard library visual overview of algorithms for comparing ranges" loading="lazy">
+
+</a>
+<a class="img hcentered" href="./C++ Cheat Sheets &amp; Infographics _ hacking C++_files/gallery-min_max.png">
+<img src="./C++ Cheat Sheets &amp; Infographics _ hacking C++_files/gallery-min_max.png" style="max-width:100%;" title="click for fullscreen view" alt="C++ standard library visual overview of algorithms for finding smallest and largest elements in sequences" loading="lazy">
+
+</a>
+<a class="img hcentered" href="./C++ Cheat Sheets &amp; Infographics _ hacking C++_files/gallery-binary_searches.png">
+<img src="./C++ Cheat Sheets &amp; Infographics _ hacking C++_files/gallery-binary_searches.png" style="max-width:100%;" title="click for fullscreen view" alt="C++ standard library visual overview of algorithms for binary searches in sorted sequences" loading="lazy">
+
+</a>
+<a class="img hcentered" href="./C++ Cheat Sheets &amp; Infographics _ hacking C++_files/gallery-ranges-binary_search.png">
+<img src="./C++ Cheat Sheets &amp; Infographics _ hacking C++_files/gallery-ranges-binary_search.png" style="max-width:100%;" title="click for fullscreen view" alt="C++20 standard library visual overview of algorithms for binary searches in sorted sequences" loading="lazy">
+
+</a>
+<a class="img hcentered" href="./C++ Cheat Sheets &amp; Infographics _ hacking C++_files/gallery-structure_queries.png">
+<img src="./C++ Cheat Sheets &amp; Infographics _ hacking C++_files/gallery-structure_queries.png" style="max-width:100%;" title="click for fullscreen view" alt="C++ standard library visual overview of sequence structure query algorithms" loading="lazy">
+
+</a>
+<a class="img hcentered" href="./C++ Cheat Sheets &amp; Infographics _ hacking C++_files/gallery-ranges-structure_queries.png">
+<img src="./C++ Cheat Sheets &amp; Infographics _ hacking C++_files/gallery-ranges-structure_queries.png" style="max-width:100%;" title="click for fullscreen view" alt="C++ standard library visual overview of sequence structure query algorithms" loading="lazy">
+
+</a>
+<a class="img hcentered" href="./C++ Cheat Sheets &amp; Infographics _ hacking C++_files/gallery-traversal.png">
+<img src="./C++ Cheat Sheets &amp; Infographics _ hacking C++_files/gallery-traversal.png" style="max-width:100%;" title="click for fullscreen view" alt="C++ standard library visual overview of range traversal algorithms" loading="lazy">
+
+</a></div></div>
+<div class="panel-fold" id="panel-fold3"><a class="nav" id="panel-fold3a" rel="nofollow"></a><h4>Copying<span class="nav-none"> / Sampling / Moving</span></h4></div>
+<div class="panel bg-filled no-padding" style="display: none;"><div class="grid-gallery-M no-stretch"><a class="img hcentered" href="./C++ Cheat Sheets &amp; Infographics _ hacking C++_files/gallery-copy.png">
+<img src="./C++ Cheat Sheets &amp; Infographics _ hacking C++_files/gallery-copy.png" style="max-width:100%;" title="click for fullscreen view" alt="C++ standard library visual overview of range copy algorithms" loading="lazy">
+
+</a>
+<a class="img hcentered" href="./C++ Cheat Sheets &amp; Infographics _ hacking C++_files/gallery-ranges-copy.png">
+<img src="./C++ Cheat Sheets &amp; Infographics _ hacking C++_files/gallery-ranges-copy.png" style="max-width:100%;" title="click for fullscreen view" alt="C++ standard library visual overview of range copy algorithms" loading="lazy">
+
+</a>
+<a class="img hcentered" href="./C++ Cheat Sheets &amp; Infographics _ hacking C++_files/gallery-move.png">
+<img src="./C++ Cheat Sheets &amp; Infographics _ hacking C++_files/gallery-move.png" style="max-width:100%;" title="click for fullscreen view" alt="C++ standard library visual overview of algorithms that move ranges of elements" loading="lazy">
+
+</a></div></div>
+<div class="panel-fold" id="panel-fold4"><a class="nav" id="panel-fold4a" rel="nofollow"></a><h4>Reordering<span class="nav-none"> Elements</span></h4></div>
+<div class="panel bg-filled no-padding" style="display: none;"><div class="grid-gallery-M no-stretch"><a class="img hcentered" href="./C++ Cheat Sheets &amp; Infographics _ hacking C++_files/gallery-shift.png">
+<img src="./C++ Cheat Sheets &amp; Infographics _ hacking C++_files/gallery-shift.png" style="max-width:100%;" title="click for fullscreen view" alt="C++ standard library visual overview of algorithms that shift sequences" loading="lazy">
+
+</a>
+<a class="img hcentered" href="./C++ Cheat Sheets &amp; Infographics _ hacking C++_files/gallery-ranges-shift.png">
+<img src="./C++ Cheat Sheets &amp; Infographics _ hacking C++_files/gallery-ranges-shift.png" style="max-width:100%;" title="click for fullscreen view" alt="C++20 standard library visual overview algorithms that shift sequences" loading="lazy">
+
+</a>
+<a class="img hcentered" href="./C++ Cheat Sheets &amp; Infographics _ hacking C++_files/gallery-sort.png">
+<img src="./C++ Cheat Sheets &amp; Infographics _ hacking C++_files/gallery-sort.png" style="max-width:100%;" title="click for fullscreen view" alt="C++ standard library visual overview of sorting algorithms" loading="lazy">
+
+</a>
+<a class="img hcentered" href="./C++ Cheat Sheets &amp; Infographics _ hacking C++_files/gallery-ranges-sort.png">
+<img src="./C++ Cheat Sheets &amp; Infographics _ hacking C++_files/gallery-ranges-sort.png" style="max-width:100%;" title="click for fullscreen view" alt="C++ standard library visual overview of sorting algorithms" loading="lazy">
+
+</a>
+<a class="img hcentered" href="./C++ Cheat Sheets &amp; Infographics _ hacking C++_files/gallery-partition.png">
+<img src="./C++ Cheat Sheets &amp; Infographics _ hacking C++_files/gallery-partition.png" style="max-width:100%;" title="click for fullscreen view" alt="C++ standard library visual overview of sequence partitioning algorithms" loading="lazy">
+
+</a>
+<a class="img hcentered" href="./C++ Cheat Sheets &amp; Infographics _ hacking C++_files/gallery-ranges-partition.png">
+<img src="./C++ Cheat Sheets &amp; Infographics _ hacking C++_files/gallery-ranges-partition.png" style="max-width:100%;" title="click for fullscreen view" alt="C++20 standard library visual overview of sequence partitioning algorithms" loading="lazy">
+
+</a>
+<a class="img hcentered" href="./C++ Cheat Sheets &amp; Infographics _ hacking C++_files/gallery-permutations.png">
+<img src="./C++ Cheat Sheets &amp; Infographics _ hacking C++_files/gallery-permutations.png" style="max-width:100%;" title="click for fullscreen view" alt="C++ standard library visual overview of sequence permutation algorithms" loading="lazy">
+
+</a>
+<a class="img hcentered" href="./C++ Cheat Sheets &amp; Infographics _ hacking C++_files/gallery-heap_ops.png">
+<img src="./C++ Cheat Sheets &amp; Infographics _ hacking C++_files/gallery-heap_ops.png" style="max-width:100%;" title="click for fullscreen view" alt="C++ standard library visual overview of algorithms for array-based heap operations" loading="lazy">
+
+</a>
+<a class="img hcentered" href="./C++ Cheat Sheets &amp; Infographics _ hacking C++_files/gallery-ranges-heap_ops.png">
+<img src="./C++ Cheat Sheets &amp; Infographics _ hacking C++_files/gallery-ranges-heap_ops.png" style="max-width:100%;" title="click for fullscreen view" alt="C++20 standard library visual overview of algorithms for array-based heap operations" loading="lazy">
+
+</a></div></div>
+<div class="panel-fold panel-fold-header" id="panel-fold5"><a class="nav" id="panel-fold5a" rel="nofollow"></a><h4>Modifying<span class="nav-none"> Elements</span></h4></div>
+<div class="panel bg-filled no-padding panel-fold-content" style="display: block;"><div class="grid-gallery-M no-stretch"><a class="img hcentered" href="./C++ Cheat Sheets &amp; Infographics _ hacking C++_files/gallery-modify.png">
+<img src="./C++ Cheat Sheets &amp; Infographics _ hacking C++_files/gallery-modify.png" style="max-width:100%;" title="click for fullscreen view" alt="C++ standard library visual overview of algorithms for modifying range elements" loading="lazy">
+
+</a>
+<a class="img hcentered" href="./C++ Cheat Sheets &amp; Infographics _ hacking C++_files/gallery-ranges-modify.png">
+<img src="./C++ Cheat Sheets &amp; Infographics _ hacking C++_files/gallery-ranges-modify.png" style="max-width:100%;" title="click for fullscreen view" alt="C++20 standard library visual overview of algorithms for modifying range elements" loading="lazy">
+
+</a>
+<a class="img hcentered" href="./C++ Cheat Sheets &amp; Infographics _ hacking C++_files/gallery-replace.png">
+<img src="./C++ Cheat Sheets &amp; Infographics _ hacking C++_files/gallery-replace.png" style="max-width:100%;" title="click for fullscreen view" alt="C++ standard library visual overview of algorithms for replacing range elements" loading="lazy">
+
+</a>
+<a class="img hcentered" href="./C++ Cheat Sheets &amp; Infographics _ hacking C++_files/gallery-remove.png">
+<img src="./C++ Cheat Sheets &amp; Infographics _ hacking C++_files/gallery-remove.png" style="max-width:100%;" title="click for fullscreen view" alt="C++ standard library visual overview of algorithms for removing range elements" loading="lazy">
+
+</a>
+<a class="img hcentered" href="./C++ Cheat Sheets &amp; Infographics _ hacking C++_files/gallery-ranges-remove.png">
+<img src="./C++ Cheat Sheets &amp; Infographics _ hacking C++_files/gallery-ranges-remove.png" style="max-width:100%;" title="click for fullscreen view" alt="C++20 standard library visual overview of algorithms for removing range elements" loading="lazy">
+
+</a>
+<a class="img hcentered" href="./C++ Cheat Sheets &amp; Infographics _ hacking C++_files/gallery-sorted_range_ops.png">
+<img src="./C++ Cheat Sheets &amp; Infographics _ hacking C++_files/gallery-sorted_range_ops.png" style="max-width:100%;" title="click for fullscreen view" alt="C++ standard library visual overview of operations on sorted sequences" loading="lazy">
+
+</a>
+<a class="img hcentered" href="./C++ Cheat Sheets &amp; Infographics _ hacking C++_files/gallery-ranges-sorted_seq_ops.png">
+<img src="./C++ Cheat Sheets &amp; Infographics _ hacking C++_files/gallery-ranges-sorted_seq_ops.png" style="max-width:100%;" title="click for fullscreen view" alt="C++20 standard library visual overview of operations on sorted sequences" loading="lazy">
+
+</a></div></div>
+<div class="panel-fold" id="panel-fold6"><a class="nav" id="panel-fold6a" rel="nofollow"></a><h4>Numeric<span class="nav-none"> Operations</span></h4></div>
+<div class="panel bg-filled no-padding" style="display: none;"><div class="grid-gallery-L no-stretch"><a class="img hcentered" href="./C++ Cheat Sheets &amp; Infographics _ hacking C++_files/gallery-numeric_reductions.png">
+<img src="./C++ Cheat Sheets &amp; Infographics _ hacking C++_files/gallery-numeric_reductions.png" style="max-width:100%;" title="click for fullscreen view" alt="C++ standard library visual overview of numeric reduction algorithms" loading="lazy">
+
+</a>
+<a class="img hcentered" href="./C++ Cheat Sheets &amp; Infographics _ hacking C++_files/gallery-numeric_scans.png">
+<img src="./C++ Cheat Sheets &amp; Infographics _ hacking C++_files/gallery-numeric_scans.png" style="max-width:100%;" title="click for fullscreen view" alt="C++ standard library visual overview of numeric scan algorithms" loading="lazy">
+
+</a></div></div></div></div>
+<a class="nav" id="hfold1a" rel="nofollow"></a><h2 class="hfold hfold-header" open="" id="hfold1"><span class="nav-none">Standard </span>Views<div class="controls"><button class="ctrl-nav-collapse" title="collapse child sections"></button><button class="ctrl-nav-expand" title="expand child sections"></button></div></h2>
+<div class="content hfold-content plain" style="display: block;"><a class="nav " id="std-views" rel="nofollow" keywords="std-views "></a>
+<div class="panel-fold panel-fold-header" open="" id="panel-fold7"><a class="nav" id="panel-fold7a" rel="nofollow"></a><h3 class="nav-none"><code><span class="c7 ">std::</span>span</code> <span class="labels "><a class="lbl " href="https://hackingcpp.com/tags/c++20.html">C++20</a></span></h3>
+<a class="nav " id="std-span" rel="nofollow" keywords="std-span "></a></div>
+<div class="panel bg-filled vcompact panel-fold-content" style="display: block;"><div class="block "><a class="img hcentered" href="https://hackingcpp.com/cpp/std/span.png">
+<img src="./C++ Cheat Sheets &amp; Infographics _ hacking C++_files/span_crop.png" style="max-width:100%;" title="click for fullscreen view" alt="std::span contiguous sequence view interface and usage cheat sheet" loading="lazy">
+
+</a></div>
+<div class="panel fit-content"><ul class="resources "><li class="cat-article"><a href="https://hackingcpp.com/cpp/std/span.html"><code>std::span</code> / <code>gsl::span</code></a></li>
+</ul></div></div>
+<div class="panel-fold panel-fold-header" open="" id="panel-fold8"><a class="nav" id="panel-fold8a" rel="nofollow"></a><h3 class="nav-none"><code><span class="c7 ">std::</span>string_view</code> <span class="labels "><a class="lbl " href="https://hackingcpp.com/tags/c++17.html">C++17</a></span></h3>
+<a class="nav " id="std-string_view" rel="nofollow" keywords="std-string_view "></a></div>
+<div class="panel bg-filled vcompact panel-fold-content" style="display: block;"><div class="block "><a class="img hcentered" href="https://hackingcpp.com/cpp/std/string_view.png">
+<img src="./C++ Cheat Sheets &amp; Infographics _ hacking C++_files/string_view_crop.png" style="max-width:100%;" title="click for fullscreen view" alt="std::string_view interface and usage cheat sheet" loading="lazy">
+
+</a></div>
+<div class="panel fit-content"><ul class="resources "><li class="cat-article"><a href="https://hackingcpp.com/cpp/std/sequence_views.html">Standard Sequence Views</a></li>
+</ul></div></div>
+<div class="panel-fold panel-fold-header" open="" id="panel-fold9"><a class="nav" id="panel-fold9a" rel="nofollow"></a><h3><span class="nav-none">Composable Range Views</span>
+<span class="nav-only">Ranges</span>
+<span class="labels "><a class="lbl ">C++20/23</a></span></h3>
+<a class="nav " id="std-range-views" rel="nofollow" keywords="std-range-views "></a></div>
+<div class="panel bg-filled vcompact panel-fold-content" style="display: block;"><div class="block "><a class="img hcentered" href="https://hackingcpp.com/cpp/std/range_views.png">
+<img src="./C++ Cheat Sheets &amp; Infographics _ hacking C++_files/range_views_crop.png" style="max-width:100%;" title="click for fullscreen view" alt="standard library range views overview sheet with visual examples" loading="lazy">
+
+</a></div>
+<div class="panel fit-content"><ul class="resources "><li class="cat-article"><a href="https://hackingcpp.com/cpp/std/range_views_intro.html">Range Views Introduction</a></li>
+
+<li class="cat-overview"><a href="https://hackingcpp.com/cpp/std/range_views.html">Range Views Overview Page</a></li>
+</ul></div></div></div>
+<a class="nav" id="hfold2a" rel="nofollow"></a><h2 class="hfold hfold-header" open="" id="hfold2"><span class="nav-none">Standard </span>Containers<div class="controls"><button class="ctrl-nav-collapse" title="collapse child sections"></button><button class="ctrl-nav-expand" title="expand child sections"></button></div></h2>
+<div class="content hfold-content plain" style="display: block;"><a class="nav " id="std-containers" rel="nofollow" keywords="std-containers "></a>
+<a class="nav " id="std-sequence-containers" rel="nofollow" keywords="std-sequence-containers "></a>
+<section>
+<div class="panel-fold panel-fold-header" open="" id="panel-fold10"><a class="nav" id="panel-fold10a" rel="nofollow"></a><h3 class="nav-none"><code>std::</code> Sequence Containers</h3></div>
+<div class="panel bg-filled vcompact panel-fold-content" style="display: block;"><div class="block "><a class="img hcentered" href="https://hackingcpp.com/cpp/std/sequence_containers.png">
+<img src="./C++ Cheat Sheets &amp; Infographics _ hacking C++_files/sequence_containers_crop.png" style="max-width:100%;width:1000px;" title="click for fullscreen view" alt="standard library sequence containers overview" loading="lazy">
+
+</a></div>
+<div class="panel fit-content"><ul class="resources "><li class="cat-article"><a href="https://hackingcpp.com/cpp/std/sequence_containers.html">Standard Library Sequence Containers Overview</a></li>
+</ul></div></div>
+<div class="panel-fold panel-fold-header" open="" id="panel-fold11"><a class="nav" id="panel-fold11a" rel="nofollow"></a><h3 class="nav-none"><code>std::vector&lt;<span class="c2"><em>ValueType</em></span>&gt;</code></h3></div>
+<div class="panel bg-filled vcompact panel-fold-content" style="display: block;"><div class="block "><a class="img hcentered" href="https://hackingcpp.com/cpp/std/vector.png">
+<img src="./C++ Cheat Sheets &amp; Infographics _ hacking C++_files/vector_crop.png" style="max-width:100%;" title="click for fullscreen view" alt="std::vector interface visual overview" loading="lazy">
+
+</a></div>
+<div class="panel fit-content"><ul class="resources "><li class="cat-article"><a href="https://hackingcpp.com/cpp/std/vector_intro.html"><code><span class="c7 ">std::</span>vector</code> Beginner's Introduction</a></li>
+
+<li class="cat-article"><a href="https://hackingcpp.com/cpp/std/vector.html"><code><span class="c7 ">std::</span>vector</code> Full Overview</a></li>
+</ul></div></div>
+<div class="panel-fold panel-fold-header" open="" id="panel-fold12"><a class="nav" id="panel-fold12a" rel="nofollow"></a><h3 class="nav-none"><code>std::deque&lt;<span class="c2"><em>ValueType</em></span>&gt;</code></h3></div>
+<div class="panel bg-filled vcompact panel-fold-content" style="display: block;"><div class="block "><a class="img hcentered" href="https://hackingcpp.com/cpp/std/deque.png">
+<img src="./C++ Cheat Sheets &amp; Infographics _ hacking C++_files/deque_crop.png" style="max-width:100%;" title="click for fullscreen view" alt="std::deque interface visual overview" loading="lazy">
+
+</a></div>
+<div class="panel fit-content"><ul class="resources "><li class="cat-article"><a href="https://hackingcpp.com/cpp/std/sequence_containers.html#deque">Standard Sequence Containers Overview</a></li>
+</ul></div></div>
+<div class="panel-fold panel-fold-header" open="" id="panel-fold13"><a class="nav" id="panel-fold13a" rel="nofollow"></a><h3 class="nav-none"><code>std::list&lt;<span class="c2"><em>ValueType</em></span>&gt;</code></h3></div>
+<div class="panel bg-filled vcompact panel-fold-content" style="display: block;"><div class="block "><a class="img hcentered" href="https://hackingcpp.com/cpp/std/list.png">
+<img src="./C++ Cheat Sheets &amp; Infographics _ hacking C++_files/list_crop.png" style="max-width:100%;" title="click for fullscreen view" alt="std::list interface visual overview" loading="lazy">
+
+</a></div>
+<div class="panel fit-content"><ul class="resources "><li class="cat-article"><a href="https://hackingcpp.com/cpp/std/sequence_containers.html#list">Standard Sequence Containers Overview</a></li>
+</ul></div></div>
+<div class="panel-fold panel-fold-header" open="" id="panel-fold14"><a class="nav" id="panel-fold14a" rel="nofollow"></a><h3 class="nav-none"><span class="hwide"><code>std::forward_list&lt;<span class="c2"><em>ValueType</em></span>&gt;</code></span>
+<span class="hslim"><code>std::forward_list&lt;<span class="c2"><em>T</em></span>&gt;</code></span></h3></div>
+<div class="panel bg-filled vcompact panel-fold-content" style="display: block;"><div class="block "><a class="img hcentered" href="https://hackingcpp.com/cpp/std/forward_list.png">
+<img src="./C++ Cheat Sheets &amp; Infographics _ hacking C++_files/forward_list_crop.png" style="max-width:100%;" title="click for fullscreen view" alt="std::forward_list interface visual overview" loading="lazy">
+
+</a></div>
+<div class="panel fit-content"><ul class="resources "><li class="cat-article"><a href="https://hackingcpp.com/cpp/std/sequence_containers.html#forward_list">Standard Sequence Containers Overview</a></li>
+</ul></div></div>
+<div class="panel-fold panel-fold-header" open="" id="panel-fold15"><a class="nav" id="panel-fold15a" rel="nofollow"></a><h3><code>std::string</code> <span class="nav-none">Interface<span class="hwide"> &amp; Utilities Overview</span></span></h3></div>
+<div class="panel bg-filled vcompact panel-fold-content" style="display: block;"><div class="block "><a class="img hcentered" href="https://hackingcpp.com/cpp/std/string.png">
+<img src="./C++ Cheat Sheets &amp; Infographics _ hacking C++_files/string_crop.png" style="max-width:100%;" title="click for fullscreen view" alt="std::string interface overview cheat sheet" loading="lazy">
+
+</a></div>
+<div class="panel fit-content"><ul class="resources "><li class="cat-article"><a href="https://hackingcpp.com/cpp/std/string_basics.html">String Basics…</a></li>
+
+<li class="cat-recipe"><a href="https://hackingcpp.com/cpp/recipe/string_parameters.html">Which Function Parameter For Strings?</a></li>
+</ul></div></div>
+</section>
+<section>
+<a class="nav " id="std-associative-containers" rel="nofollow" keywords="std-associative-containers "></a>
+<div class="panel-fold panel-fold-header" open="" id="panel-fold16"><a class="nav" id="panel-fold16a" rel="nofollow"></a><h3 class="nav-none"><code>std::</code> Associative Containers</h3></div>
+<div class="panel bg-filled vcompact panel-fold-content" style="display: block;"><div class="block "><a class="img hcentered" href="https://hackingcpp.com/cpp/std/associative_containers.png">
+<img src="./C++ Cheat Sheets &amp; Infographics _ hacking C++_files/associative_containers_crop.png" style="max-width:100%;width:1000px;" title="click for fullscreen view" alt="standard library associative containers overview" loading="lazy">
+
+</a></div>
+<div class="panel fit-content"><ul class="resources "><li class="cat-article"><a href="https://hackingcpp.com/cpp/std/associative_containers.html">Associative Containers Introduction</a></li>
+</ul></div></div>
+<div class="panel-fold panel-fold-header" open="" id="panel-fold17"><a class="nav" id="panel-fold17a" rel="nofollow"></a><h3 class="nav-none"><code>std::set&lt;<span class="c2"><em>Key<span class="hwide">Type</span></em></span>,<span class="c7"><em>Compare</em></span>&gt;</code></h3></div>
+<div class="panel bg-filled vcompact panel-fold-content" style="display: block;"><div class="block "><a class="img hcentered" href="https://hackingcpp.com/cpp/std/set.png">
+<img src="./C++ Cheat Sheets &amp; Infographics _ hacking C++_files/set_crop.png" style="max-width:100%;" title="click for fullscreen view" alt="std::set / std::multiset interface visual overview" loading="lazy">
+
+</a></div>
+<div class="panel fit-content"><ul class="resources "><li class="cat-article"><a href="https://hackingcpp.com/cpp/std/associative_containers.html">Associative Containers Introduction</a></li>
+</ul></div></div>
+<div class="panel-fold panel-fold-header" open="" id="panel-fold18"><a class="nav" id="panel-fold18a" rel="nofollow"></a><h3 class="nav-none"><code>std::map&lt;<span class="c1"><em>Key<span class="hwide">Type</span></em></span>,<span class="c2"><em>Mapped<span class="hwide">Type</span></em></span>,<span class="c7"><em>KeyCompare</em></span>&gt;</code></h3></div>
+<div class="panel bg-filled vcompact panel-fold-content" style="display: block;"><div class="block "><a class="img hcentered" href="https://hackingcpp.com/cpp/std/map.png">
+<img src="./C++ Cheat Sheets &amp; Infographics _ hacking C++_files/map_crop.png" style="max-width:100%;" title="click for fullscreen view" alt="std::map / std::multimap interface visual overview" loading="lazy">
+
+</a></div>
+<div class="panel fit-content"><ul class="resources "><li class="cat-article"><a href="https://hackingcpp.com/cpp/std/associative_containers.html">Associative Containers Introduction</a></li>
+</ul></div></div>
+<div class="panel-fold panel-fold-header" open="" id="panel-fold19"><a class="nav" id="panel-fold19a" rel="nofollow"></a><h3 class="nav-none"><code>std::unordered_set&lt;<span class="c2"><em>Key<span class="hwide">Type</span></em></span><span class="hwide">,<span class="c7"><em>Hash,KeyEqual</em></span></span>&gt;</code></h3></div>
+<div class="panel bg-filled vcompact panel-fold-content" style="display: block;"><div class="block "><a class="img hcentered" href="https://hackingcpp.com/cpp/std/unordered_set.png">
+<img src="./C++ Cheat Sheets &amp; Infographics _ hacking C++_files/unordered_set_crop.png" style="max-width:100%;" title="click for fullscreen view" alt="std::unordered_set / std::unordered_multiset interface visual overview" loading="lazy">
+
+</a></div>
+<div class="panel fit-content"><ul class="resources "><li class="cat-article"><a href="https://hackingcpp.com/cpp/std/associative_containers.html">Associative Containers Introduction</a></li>
+</ul></div></div>
+<div class="panel-fold panel-fold-header" open="" id="panel-fold20"><a class="nav" id="panel-fold20a" rel="nofollow"></a><h3 class="nav-none"><code>std::unordered_map&lt;<span class="c1"><em>Key<span class="hwide">Type</span></em></span>,<span class="c2"><em>Mapped<span class="hwide">Type</span></em></span><span class="hwide">,<span class="c7"><em>Hash,KeyEqual</em></span></span>&gt;</code></h3></div>
+<div class="panel bg-filled vcompact panel-fold-content" style="display: block;"><div class="block "><a class="img hcentered" href="https://hackingcpp.com/cpp/std/unordered_map.png">
+<img src="./C++ Cheat Sheets &amp; Infographics _ hacking C++_files/unordered_map_crop.png" style="max-width:100%;" title="click for fullscreen view" alt="std::unordered_map / std::unordered_multimap interface visual overview" loading="lazy">
+
+</a></div>
+<div class="panel fit-content"><ul class="resources "><li class="cat-article"><a href="https://hackingcpp.com/cpp/std/associative_containers.html">Associative Containers Introduction</a></li>
+</ul></div></div>
+</section>
+<section>
+<a class="nav " id="std-special-containers" rel="nofollow" keywords="std-special-containers "></a>
+<div class="panel-fold panel-fold-header" open="" id="panel-fold21"><a class="nav" id="panel-fold21a" rel="nofollow"></a><h3 class="nav-none"><code>std::</code> Special Containers</h3></div>
+<div class="panel bg-filled vcompact panel-fold-content" style="display: block;"><div class="block "><a class="img hcentered" href="https://hackingcpp.com/cpp/std/special_containers.png">
+<img src="./C++ Cheat Sheets &amp; Infographics _ hacking C++_files/special_containers_crop.png" style="max-width:100%;width:1000px;" title="click for fullscreen view" alt="standard library special containers overview" loading="lazy">
+
+</a></div>
+<div class="panel fit-content"><ul class="resources "><li class="cat-slides"><a href="https://hackingcpp.com/cpp/std/special_containers.html">Special Containers Introduction</a></li>
+</ul></div></div>
+</section>
+<section>
+<div class="grid-gallery-L "><div class="panel "><a class="nav" id="H4-3a" rel="nofollow"></a><h4 id="H4-3">Iterators</h4>
+<div class="block "><a class=" img" href="https://hackingcpp.com/cpp/std/iterators_intro.html" title="click to go to page &quot;Iterators (Introduction)&quot;">
+<img src="./C++ Cheat Sheets &amp; Infographics _ hacking C++_files/iterators_crop.svg" style="max-width:100%;width:380px;" alt="example: iterators in C++" loading="lazy">
+
+</a></div></div>
+<div class="panel "><a class="nav" id="H4-4a" rel="nofollow"></a><h4 id="H4-4">Iterator Range</h4>
+<div class="block "><a class=" img" href="https://hackingcpp.com/cpp/std/iterators_intro.html#iterator-ranges" title="click to go to page &quot;Iterators (Introduction)&quot;">
+<img src="./C++ Cheat Sheets &amp; Infographics _ hacking C++_files/iterator_ranges_crop.svg" style="max-width:100%;width:300px;" alt="iterator range convention: pair of iterators" loading="lazy">
+
+</a></div>
+<span class="spacer"></span>
+<p class="cat-important">end-of-range iterator <code><strong>q</strong></code>
+points one <strong>behind</strong> the last element in the range</p></div>
+<div class="panel "><h4 class="nav-none">Iterator Range Examples</h4>
+<div class="block "><a class=" img" href="https://hackingcpp.com/cpp/std/iterators_intro.html#iterator-ranges" title="click to go to page &quot;Iterators (Introduction)&quot;">
+<img src="./C++ Cheat Sheets &amp; Infographics _ hacking C++_files/iterator_ranges_examples_crop.svg" style="max-width:100%;width:350px;" alt="examples of various iterator ranges" loading="lazy">
+
+</a></div></div>
+<div class="panel "><a class="nav" id="H4-5a" rel="nofollow"></a><h4 id="H4-5">Which Sequence Container Should I Use?</h4>
+<div class="block ">
+<a href="https://hackingcpp.com/cpp/design/which_std_sequence_container.png" class="img hcentered"><img src="./C++ Cheat Sheets &amp; Infographics _ hacking C++_files/which_std_sequence_container_thumb.png" style="max-width:100%;width:100%;" alt="flowchart for selecting an appropriate standard library container" loading="lazy"></a></div></div>
+<div class="panel "><a class="nav" id="H4-6a" rel="nofollow"></a><h4 id="H4-6"><code>vector</code> Growth<span class="nav-none"> Scheme</span></h4>
+<div class="block "><a class=" img hcentered" href="https://hackingcpp.com/cpp/std/vector.html#how-growing" title="click to go to page &quot;std::vector&quot;">
+<img src="./C++ Cheat Sheets &amp; Infographics _ hacking C++_files/vector_growth.svg" style="max-width:100%;width:250px;" alt="example of growing a std::vector works internally" loading="lazy">
+
+</a></div></div>
+<div class="panel vcompact"><a class="nav" id="H4-7a" rel="nofollow"></a><h4 id="H4-7"><code>vector</code> Memory<span class="nav-none"> Layout (typical)</span></h4>
+<p>Example: vector object <code>w</code> on the stack</p>
+<span class="spacer"></span>
+<div class="block ">
+<pre class="notranslate"><code>vector&lt;int&gt; w {0,1,2,3,4};
+w.reserve(8);</code></pre>
+</div>
+<span class="spacer"></span>
+<a class=" img hcentered" href="https://hackingcpp.com/cpp/std/vector.html#memory-layout" title="click to go to page &quot;std::vector&quot;">
+<img src="./C++ Cheat Sheets &amp; Infographics _ hacking C++_files/vector_memory_layout.svg" style="max-width:100%;width:320px;" alt="simplified std::vector memory layout" loading="lazy">
+
+</a></div></div>
+</section></div>
+<a class="nav" id="hfold3a" rel="nofollow"></a><h2 class="hfold hfold-header" open="" id="hfold3"><span class="nav-none">Standard </span>Randomness<div class="controls"><button class="ctrl-nav-collapse" title="collapse child sections"></button><button class="ctrl-nav-expand" title="expand child sections"></button></div></h2>
+<div class="content hfold-content plain" style="display: block;"><a class="nav " id="std-random" rel="nofollow" keywords="std-random "></a>
+<div class="panel-fold panel-fold-header" open="" id="panel-fold22"><a class="nav" id="panel-fold22a" rel="nofollow"></a><h3><span class="hwide">Standard </span>Random Distributions
+<span class="labels "><a class="lbl " href="https://hackingcpp.com/tags/c++11.html">C++11</a></span></h3></div>
+<div class="panel bg-filled vcompact panel-fold-content" style="display: block;"><div class="block "><a href="https://hackingcpp.com/cpp/std/random_distributions.png" class="img"><img src="./C++ Cheat Sheets &amp; Infographics _ hacking C++_files/random_distributions_crop.png" title="click for fullscreen view" style="max-width:100%;width:100%" alt="an overview of standard library random distribution types" "="" loading="lazy"></a>
+</div>
+<div class="panel fit-content"><ul class="resources "><li class="cat-article"><a href="https://hackingcpp.com/cpp/std/random.html">Random Number Generation</a></li>
+
+<li class="cat-article"><a href="https://hackingcpp.com/cpp/std/random.html#distributions">Random Distributions</a></li>
+</ul></div></div>
+<div class="panel-fold panel-fold-header" open="" id="panel-fold23"><a class="nav" id="panel-fold23a" rel="nofollow"></a><h3><span class="hwide">Standard </span>Random Sampling Distributions
+<span class="labels "><a class="lbl " href="https://hackingcpp.com/tags/c++11.html">C++11</a></span></h3></div>
+<div class="panel bg-filled vcompact panel-fold-content" style="display: block;"><div class="block "><a href="https://hackingcpp.com/cpp/std/random_sampling_distributions.png" class="img"><img src="./C++ Cheat Sheets &amp; Infographics _ hacking C++_files/random_sampling_distributions_crop.png" title="click for fullscreen view" style="max-width:100%;width:900px" alt="an overview of standard library random distribution types" "="" loading="lazy"></a>
+</div>
+<div class="panel fit-content"><ul class="resources "><li class="cat-article"><a href="https://hackingcpp.com/cpp/std/random.html#distributions">Random Distributions</a></li>
+</ul></div></div></div>
+<a class="nav" id="hfold4a" rel="nofollow"></a><h2 class="hfold hfold-header" open="" id="hfold4"><span class="nav-none">Standard </span>Utilities</h2>
+<div class="content hfold-content plain" style="display: block;"><a class="nav " id="std-utilities" rel="nofollow" keywords="std-utilities "></a>
+<section>
+<div class="panel-fold panel-fold-header" open="" id="panel-fold24"><a class="nav" id="panel-fold24a" rel="nofollow"></a><h3><code>std::numeric_limits&lt;<span class="c2"><em>T</em></span>&gt;</code></h3></div>
+<div class="panel bg-filled vcompact panel-fold-content" style="display: block;"><div class="block "><a class="img hcentered" href="https://hackingcpp.com/cpp/std/numeric_limits.png">
+<img src="./C++ Cheat Sheets &amp; Infographics _ hacking C++_files/numeric_limits_crop.png" style="max-width:100%;" title="click for fullscreen view" alt="std::numeric_limits values and binary number representations for signed integers, unsigned integers and floating point numbers" loading="lazy">
+
+</a></div>
+<div class="panel fit-content"><ul class="resources "><li class="cat-article"><a href="https://hackingcpp.com/cpp/lang/fundamental_types.html">Fundamental Types…</a></li>
+</ul></div></div>
+</section></div>
+<a class="nav" id="hfold5a" rel="nofollow"></a><h2 class="hfold hfold-header" open="" id="hfold5">Language<span class="nav-none"><span class="hwide"> Rules &amp;</span> Mechanisms</span><div class="controls"><button class="ctrl-nav-collapse" title="collapse child sections"></button><button class="ctrl-nav-expand" title="expand child sections"></button></div></h2>
+<div class="content hfold-content plain" style="display: block;"><a class="nav " id="language" rel="nofollow" keywords="language language mechanism"></a>
+<section>
+<div class="panel-fold panel-fold-header" open="" id="panel-fold25"><a class="nav" id="panel-fold25a" rel="nofollow"></a><h3>Build Model<span class="hwide"> / Compiling A Project</span></h3></div>
+<div class="panel panel-fold-content" style="display: block;"><span class="spacer"></span>
+<div class="block "><a href="https://hackingcpp.com/cpp/lang/separate_compilation.png" class="img"><img src="./C++ Cheat Sheets &amp; Infographics _ hacking C++_files/separate_compilation_crop.svg" title="click for fullscreen view" style="max-width:100%;width:100%;max-width:1000px;" alt="separate compilation example" "="" loading="lazy"></a>
+</div>
+<span class="spacer"></span>
+<ul class="resources "><li class="cat-slides"><a href="https://hackingcpp.com/cpp/lang/separate_compilation.html">Separate Compilation, Preprocessor, …</a></li>
+</ul></div>
+<div class="panel-fold panel-fold-header" open="" id="panel-fold26"><a class="nav" id="panel-fold26a" rel="nofollow"></a><h3><span class="hwide">The "Usual </span>Arithmetic Conversions<span class="hwide">"</span></h3></div>
+<div class="panel bg-filled vcompact panel-fold-content" style="display: block;"><div class="block "><a class="img hcentered" href="https://hackingcpp.com/cpp/lang/usual_arithmetic_conversions.png">
+<img src="./C++ Cheat Sheets &amp; Infographics _ hacking C++_files/usual_arithmetic_conversions_crop.png" style="max-width:100%;" title="click for fullscreen view" alt="Summary of the arithmetic type conversion rules incl. integer promotion and conversion rules." loading="lazy">
+
+</a></div>
+<div class="panel fit-content"><ul class="resources "><li class="cat-article"><a href="https://hackingcpp.com/cpp/lang/fundamental_types.html">Fundamental Types &amp; Operations …</a></li>
+</ul></div></div>
+<div class="panel-fold panel-fold-header" open="" id="panel-fold27"><a class="nav" id="panel-fold27a" rel="nofollow"></a><h3>Lambda<span class="nav-none"> Expression</span>s</h3></div>
+<div class="panel bg-filled vcompact panel-fold-content" style="display: block;"><div class="block "><a href="https://hackingcpp.com/cpp/lang/lambdas.png" class="img"><img src="./C++ Cheat Sheets &amp; Infographics _ hacking C++_files/lambdas_crop.png" title="click for fullscreen view" style="max-width:100%;" alt="lambda expressions syntax &amp; semantics overview" "="" loading="lazy"></a>
+</div>
+<div class="panel fit-content"><ul class="resources "><li class="cat-article"><a href="https://hackingcpp.com/cpp/design/function_objects.html">Introduction To Function Objects…</a></li>
+
+<li class="cat-slides"><a href="https://hackingcpp.com/cpp/lang/lambda_basics.html">Lambda Basics…</a></li>
+</ul></div></div>
+<div class="grid-gallery-XL "><div class="content "><div class="panel-fold panel-fold-header" open="" id="panel-fold28"><a class="nav" id="panel-fold28a" rel="nofollow"></a><h3>Lambda <span class="nav-none">Expression </span>Syntax</h3></div>
+<div class="panel bg-filled vcompact panel-fold-content" style="display: block;"><div class="block "><a class="img hcentered" href="https://hackingcpp.com/cpp/lang/lambda_syntax.png">
+<img src="./C++ Cheat Sheets &amp; Infographics _ hacking C++_files/lambda_syntax_crop.png" style="max-width:100%;width:100%" title="click for fullscreen view" alt="allowed lambda expression syntax in different C++ standards" loading="lazy">
+
+</a></div></div></div></div>
+</section>
+<section>
+<div class="grid-gallery-L "><div class="panel "><a class="nav" id="H4-8a" rel="nofollow"></a><h4 id="H4-8">Variables<span class="nav-none"> in C++</span></h4>
+<div class="block "><a class="img hcentered" href="https://hackingcpp.com/cpp/lang/variables.svg">
+<img src="./C++ Cheat Sheets &amp; Infographics _ hacking C++_files/variables_crop.svg" style="max-width:100%;width:400px;" title="click for fullscreen view" alt="variable = named object = set of bits interpreted according to a type" loading="lazy">
+
+</a></div>
+<hr>
+<ul class="resources "><li class="cat-article"><a href="https://hackingcpp.com/cpp/lang/fundamental_types.html">Fundamental Types</a></li>
+</ul></div>
+<div class="panel "><a class="nav" id="H4-9a" rel="nofollow"></a><h4 id="H4-9">Reference Binding<span class="nav-none"> Rules</span></h4>
+<div class="block "><a class="img hcentered" href="https://hackingcpp.com/cpp/lang/reference_binding.svg">
+<img src="./C++ Cheat Sheets &amp; Infographics _ hacking C++_files/reference_binding_crop.svg" style="max-width:100%;width:400px;" title="click for fullscreen view" alt="reference binding rules" loading="lazy">
+
+</a></div>
+<hr>
+<ul class="resources "><li class="cat-article"><a href="https://hackingcpp.com/cpp/lang/references.html">References</a></li>
+
+<li class="cat-slides"><a href="https://hackingcpp.com/cpp/lang/move_semantics.html">Move Semantics &amp; rvalue References</a></li>
+</ul></div>
+<div class="panel "><a class="nav" id="H4-10a" rel="nofollow"></a><h4 id="H4-10">Reference Collapsing  <a class="lbl " href="https://hackingcpp.com/tags/c++11.html">C++11</a><br></h4>
+<p><small>for template arguments</small></p>
+<div class="block "><a class="img hcentered" href="https://hackingcpp.com/cpp/lang/reference_collapsing.svg">
+<img src="./C++ Cheat Sheets &amp; Infographics _ hacking C++_files/reference_collapsing_crop.svg" style="max-width:100%;width:480px;" title="click for fullscreen view" alt="reference collapsing rules" loading="lazy">
+
+</a></div>
+<hr>
+<ul class="resources "><li class="cat-slides"><a href="https://hackingcpp.com/cpp/lang/move_semantics.html">Move Semantics &amp; rvalue References</a></li>
+
+<li class="cat-slides"><a href="https://hackingcpp.com/cpp/lang/perfect_forwarding.html">Perfect Forwarding</a></li>
+</ul></div>
+<div class="panel "><a class="nav" id="H4-11a" rel="nofollow"></a><h4 id="H4-11"><span class="nav-none">Perfect Forwarding
+<a class="lbl " href="https://hackingcpp.com/tags/c++11.html">C++11</a>
+<br>
+<small>of template arguments</small></span>
+<span class="nav-only">Forwarding</span></h4>
+<div class="block "><a class="img hcentered" href="https://hackingcpp.com/cpp/lang/perfect_forwarding.svg">
+<img src="./C++ Cheat Sheets &amp; Infographics _ hacking C++_files/perfect_forwarding_crop.svg" style="max-width:100%;" title="click for fullscreen view" alt="example of the perfect forwarding idiom" loading="lazy">
+
+</a></div>
+<hr>
+<ul class="resources "><li class="cat-slides"><a href="https://hackingcpp.com/cpp/lang/perfect_forwarding.html">Perfect Forwarding</a></li>
+</ul></div></div>
+</section></div>
+<a class="nav" id="hfold6a" rel="nofollow"></a><h2 class="hfold hfold-header" open="" id="hfold6"><span class="hwide">Non-Standard </span>Libraries<div class="controls"><button class="ctrl-nav-collapse" title="collapse child sections"></button><button class="ctrl-nav-expand" title="expand child sections"></button></div></h2>
+<div class="content hfold-content plain" style="display: block;"><a class="nav " id="non-std-libs" rel="nofollow" keywords="non-std-libs 3rd party libraries"></a>
+<a class="nav " id="fmt" rel="nofollow" keywords="fmt fmt {fmt} format formatting"></a>
+<section>
+<div class="panel-fold panel-fold-header" open="" id="panel-fold29"><a class="nav" id="panel-fold29a" rel="nofollow"></a><h3>{fmt} <span class="faint ">v8.0</span> – Printing<span class="hwide"> &amp; Formatting</span></h3></div>
+<div class="panel bg-filled fit-content vcompact panel-fold-content" style="display: block;"><div class="block "><a class="img hcentered" href="https://hackingcpp.com/cpp/libs/fmt.png">
+<img src="./C++ Cheat Sheets &amp; Infographics _ hacking C++_files/fmt_crop.png" style="max-width:100%;" title="click for fullscreen view" alt="example-based overview of formatting and printing with the {fmt} library" loading="lazy">
+
+</a></div>
+<div class="panel fit-content"><ul class="resources "><li class="cat-article"><a href="https://hackingcpp.com/cpp/libs/fmt.html">{fmt} Library Introduction &amp; Overview</a></li>
+</ul></div></div>
+<div class="grid-gallery-XL "><div class="content "><div class="panel-fold panel-fold-header" open="" id="panel-fold30"><a class="nav" id="panel-fold30a" rel="nofollow"></a><h3>{fmt} <span class="faint ">v8.0</span> – Time &amp; Date<span class="hwide"> Formatting</span></h3></div>
+<div class="panel bg-filled vcompact panel-fold-content" style="display: block;"><div class="block "><a class="img hcentered" href="https://hackingcpp.com/cpp/libs/fmt_spec_chrono.png">
+<img src="./C++ Cheat Sheets &amp; Infographics _ hacking C++_files/fmt_spec_chrono_crop.png" style="max-width:100%;" title="click for fullscreen view" alt="time/date formatting string tokens as used by the {fmt} library, std::format and std::strftime" loading="lazy">
+
+</a></div>
+<p><a class="" target="_blank" href="https://en.cppreference.com/w/cpp/utility/format/format">std::format</a> and 
+<a class="" target="_blank" href="https://en.cppreference.com/w/cpp/chrono/c/strftime">std::strftime</a> use the same formatting tokens</p></div></div></div>
+</section></div>
+<a class="nav" id="hfold7a" rel="nofollow"></a><h2 class="hfold hfold-header" open="" id="hfold7">Design<span class="nav-none"> Guidelines</span></h2>
+<div class="content hfold-content plain" style="display: block;"><a class="nav " id="design" rel="nofollow" keywords="design design guidelines"></a>
+<section>
+<div class="panel bg-filled fit-content"><a class="nav" id="H3-0a" rel="nofollow"></a><h3 id="H3-0"><span class="nav-none"><span class="hwide">Function </span>Parameters &amp; Return Values</span>
+<span class="nav-only">Fn Interfaces</span>
+<span class="labels "><a class="lbl " href="https://hackingcpp.com/tags/c++17.html">C++17</a></span></h3>
+<div class="block "><a class="img hcentered" href="https://hackingcpp.com/cpp/design/function_interface_advice.png">
+<img src="./C++ Cheat Sheets &amp; Infographics _ hacking C++_files/function_interface_advice_crop.png" style="max-width:100%;width:100%;max-width:1000px" title="click for fullscreen view" alt="cheat sheet about what function parameter types and return types to use" loading="lazy">
+
+</a></div>
+<div class="panel fit-content"><ul class="vcompact"><li>prefer specific types over general-purpose types</li>
+
+<li>don't use getter/setter pairs for classes</li>
+
+<li>use descriptive action names (<q>verbs</q>) for mutating member functions</li>
+
+<li>avoid direct <em>mutable</em> access to class member variables from the outside</li>
+</ul>
+<ul class="resources "><li class="cat-slides"><a href="https://hackingcpp.com/cpp/design/function_interface_example1.html">Design Study: Function Interfaces</a></li>
+</ul></div></div>
+</section>
+<section>
+<div class="grid-gallery-XL "><div class="panel "><h3 class="nav-none">String(-Like) Function Parameters</h3>
+<div class="block "><a class=" img" href="https://hackingcpp.com/cpp/recipe/string_parameters.html" title="click to go to page &quot;Strings: Which Function Parameter Type?&quot;">
+<img src="./C++ Cheat Sheets &amp; Infographics _ hacking C++_files/string_parameters.svg" style="max-width:100%;width:600px;" alt="cheat sheet about what type to use for string-like functions parameters" loading="lazy">
+
+</a></div>
+<span class="spacer"></span>
+<ul class="resources "><li class="cat-recipe"><a href="https://hackingcpp.com/cpp/recipe/string_parameters.html">More…</a></li>
+</ul></div>
+<div class="panel "><h3 class="nav-none">Don't Throw Exceptions in Destructors!</h3>
+<p>Parent (of type <code><strong>A</strong></code>) gets destroyed 
+and the destructor of one child (type <code><strong>B</strong></code>)
+throws an exception ⇒ resources may leak!</p>
+<span class="spacer"></span>
+<div class="block "><a class=" img hcentered" href="https://hackingcpp.com/cpp/lang/exceptions.html" title="click to go to page &quot;Exceptions&quot;">
+<img src="./C++ Cheat Sheets &amp; Infographics _ hacking C++_files/throwing_destructors.png" style="max-width:100%;max-width:100%" alt="example showing why throwing destructors are bad" loading="lazy">
+
+</a></div>
+<span class="spacer"></span>
+<ul class="resources "><li class="cat-article"><a href="https://hackingcpp.com/cpp/lang/exceptions.html#destructors">More…</a></li>
+</ul></div></div>
+</section></div>
+<a class="nav" id="hfold8a" rel="nofollow"></a><h2 class="hfold hfold-header" open="" id="hfold8">Engineering</h2>
+<div class="content hfold-content plain" style="display: block;"><a class="nav " id="engineering" rel="nofollow" keywords="engineering "></a>
+<section>
+<div class="panel bg-filled fit-content"><a class="nav" id="H3-1a" rel="nofollow"></a><h3 id="H3-1">Binary Representations of Numeric Values</h3>
+<div class="block "><a class="img hcentered" href="https://hackingcpp.com/cs/number_representations.png">
+<img src="./C++ Cheat Sheets &amp; Infographics _ hacking C++_files/number_representations_crop.png" style="max-width:100%;" title="click for fullscreen view" alt="binary representations of numeric values: unsigned integers, signed integers and IEEE 754 floating point numbers" loading="lazy">
+
+</a></div></div>
+</section></div>
+<a class="nav" id="hfold9a" rel="nofollow"></a><h2 class="hfold hfold-header" open="" id="hfold9">Terminology</h2>
+<div class="content hfold-content plain" style="display: block;"><a class="nav " id="terms" rel="nofollow" keywords="terms terminology"></a>
+<div class="grid-gallery-XL "><div class="panel "><a class="nav" id="H3-2a" rel="nofollow"></a><h3 id="H3-2"><span class="nav-none">Function </span>Contracts</h3>
+<div class="block "><a class=" img hcentered" href="https://hackingcpp.com/cpp/lang/function_basics.html#design" title="click to go to page &quot;Functions (Basics)&quot;">
+<img src="./C++ Cheat Sheets &amp; Infographics _ hacking C++_files/function_contracts_crop.svg" style="max-width:100%;width:100%;" alt="overview of function contract terminology: preconditions, postconditions, invariants, side effects" loading="lazy">
+
+</a></div></div></div></div></section>
+<section class="epilog">
+<div class="panel-fold panel-fold-header" open="" id="panel-fold31"><a class="nav" id="panel-fold31a" rel="nofollow"></a><h2 class="cat-link nav-none">Related <span class="if-closed">…</span></h2></div>
+<div class="panel panel-fold-content" style="display: block;"><ul class="resources ">
+<li class="cat-gallery"><a href="http://www.cheat-sheets.org/" target="_blank">Vast Collection of Cheat Sheets  <small>(by Alexander Krassotkin)</small></a></li>
+
+<li class="cat-gallery"><a href="https://devhints.io/" target="_blank">Rico's Cheat Sheets <small>(for tools &amp; languages)</small></a></li>
+
+<li class="cat-gallery"><a href="https://wizardzines.com/comics/" target="_blank">Wizard Zines – Nice Cheat Sheets and Posters  <small>(by Julia Evens)</small></a></li>
+
+<li class="cat-gallery"><a href="https://quickref.me/" target="_blank">Quickref.me – Cheat Sheet Collection</a></li>
+
+<li class="cat-github"><a href="https://github.com/ufoym/cpp-core-guidelines-cheatsheet" target="_blank">C++ Core Guidelines Cheatsheet(s)</a></li></ul>
+<hr class="vcompact">
+<ul class="resources ">
+<li class="cat-gallery"><a href="https://quickref.me/bash" target="_blank">Bash Cheat Sheet</a></li>
+
+<li class="cat-gallery"><a href="https://quickref.me/vim" target="_blank">VIM Cheat Sheet</a></li></ul>
+<hr class="vcompact">
+<ul class="resources ">
+<li class="cat-gallery"><a href="https://devhints.io/git-branch" target="_blank"><code>git</code> Branching  <small>(Cheat Sheet)</small></a></li>
+
+<li class="cat-gallery"><a href="https://devhints.io/git-revisions" target="_blank"><code>git</code> Revisions  <small>(Cheat Sheet)</small></a></li>
+
+<li class="cat-gallery"><a href="https://devhints.io/git-tricks" target="_blank"><code>git</code> Tricks  <small>(Cheat Sheet)</small></a></li>
+
+<li class="cat-gallery"><a href="https://devhints.io/tig" target="_blank"><code>tig</code> Commands  <small>(Cheat Sheet)</small></a></li></ul></div>
+</section>
+<section class="metadata">
+<p><span class="cat-date">Last updated: 2023-02-19</span></p>
+</section>
+<section class="sharing">
+<p>Found this useful? Share it:</p>
+<p>
+<a href="https://twitter.com/share?url=https://hackingcpp.com/cpp/cheat_sheets.html" target="_blank" rel="noopener nofollow" title="share on twitter"><svg class="twitter" viewBox="0 0 512 512"><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"></path></svg></a>
+<a href="http://www.reddit.com/submit?url=https://hackingcpp.com/cpp/cheat_sheets.html" target="_blank" rel="noopener nofollow" title="share on reddit"><svg class="reddit" viewBox="0 0 512 512"><path d="M201.5 305.5c-13.8 0-24.9-11.1-24.9-24.6 0-13.8 11.1-24.9 24.9-24.9 13.6 0 24.6 11.1 24.6 24.9 0 13.6-11.1 24.6-24.6 24.6zM504 256c0 137-111 248-248 248S8 393 8 256 119 8 256 8s248 111 248 248zm-132.3-41.2c-9.4 0-17.7 3.9-23.8 10-22.4-15.5-52.6-25.5-86.1-26.6l17.4-78.3 55.4 12.5c0 13.6 11.1 24.6 24.6 24.6 13.8 0 24.9-11.3 24.9-24.9s-11.1-24.9-24.9-24.9c-9.7 0-18 5.8-22.1 13.8l-61.2-13.6c-3-.8-6.1 1.4-6.9 4.4l-19.1 86.4c-33.2 1.4-63.1 11.3-85.5 26.8-6.1-6.4-14.7-10.2-24.1-10.2-34.9 0-46.3 46.9-14.4 62.8-1.1 5-1.7 10.2-1.7 15.5 0 52.6 59.2 95.2 132 95.2 73.1 0 132.3-42.6 132.3-95.2 0-5.3-.6-10.8-1.9-15.8 31.3-16 19.8-62.5-14.9-62.5zM302.8 331c-18.2 18.2-76.1 17.9-93.6 0-2.2-2.2-6.1-2.2-8.3 0-2.5 2.5-2.5 6.4 0 8.6 22.8 22.8 87.3 22.8 110.2 0 2.5-2.2 2.5-6.1 0-8.6-2.2-2.2-6.1-2.2-8.3 0zm7.7-75c-13.6 0-24.6 11.1-24.6 24.9 0 13.6 11.1 24.6 24.6 24.6 13.8 0 24.9-11.1 24.9-24.6 0-13.8-11-24.9-24.9-24.9z"></path></svg></a>
+<a href="https://www.facebook.com/sharer/sharer.php?u=https://hackingcpp.com/cpp/cheat_sheets.html" target="_blank" rel="noopener nofollow" title="share on facebook"><svg class="facebook" viewBox="0 0 512 512"><path d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"></path></svg></a>
+<a href="https://www.linkedin.com/sharing/share-offsite/?url=https://hackingcpp.com/cpp/cheat_sheets.html" target="_blank" rel="noopener nofollow" title="share on linkedin"><svg class="linkedin" viewBox="0 0 448 512"><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"></path></svg></a>
+</p>
+</section>
+<section class="user-comments">
+<a class="nav" id="hfold10a" rel="nofollow"></a><h2 class="hfold hfold-header nav-none" open="" id="hfold10"><span class="cat-comments"></span> Comments<span class="if-closed">…</span></h2>
+<div class="content hfold-content plain" style="display: block;"><div class="utterances">
+    <iframe class="utterances-frame" title="Comments" scrolling="no" src="./C++ Cheat Sheets &amp; Infographics _ hacking C++_files/utterances.html" loading="lazy"></iframe>
+  </div></div>
+</section>
+</article></div>
+<footer>
+<div id="footer-top"><div id="footer-top-content"><div id="footer-top-left"><nav><ul class="plain "><li><a href="https://hackingcpp.com/index.html" class="cat-home" rel="home">Home</a>
+</li>
+
+<li><a href="https://hackingcpp.com/tags/news.html" class="cat-news">News</a>
+</li>
+
+<li><a href="https://hackingcpp.com/tags/article.html" class="cat-article">Articles</a>
+</li>
+
+<li><a href="https://hackingcpp.com/tags/recipe.html" class="cat-recipe">Recipes</a>
+</li>
+
+<li><a href="https://hackingcpp.com/tags/guide.html" class="cat-guide">Guides</a>
+</li>
+
+<li><a href="https://hackingcpp.com/tags/list.html" class="cat-list">Lists</a>
+</li>
+
+<li><a href="https://hackingcpp.com/about.html" class="cat-about">About</a>
+</li>
+
+<li><a href="https://hackingcpp.com/privacy.html" class="cat-contact">Privacy</a>
+</li>
+
+<li><a href="https://twitter.com/hackingcpp" class="cat-twitter" target="_blank">Twitter</a>
+</li>
+
+<li><a href="https://hackingcpp.com/feed.rss" class="cat-rss" target="_blank">RSS Feed</a>
+</li>
+</ul></nav></div>
+<div id="footer-top-right"><h2 class="cat-tags nav-none"><a href="https://hackingcpp.com/tags.html">Tags</a>
+</h2>
+<ul class="topic-cloud "><li><a style="font-size:120.98363571051551%;" href="https://hackingcpp.com/tags/algorithms.html">algorithms</a></li> <li><a style="font-size:82.36427206485621%;" href="https://hackingcpp.com/tags/allocators.html">allocators</a></li> <li><a style="font-size:88.22056932536952%;" href="https://hackingcpp.com/tags/arrays.html">arrays</a></li> <li><a style="font-size:153.12664895216923%;" href="https://hackingcpp.com/tags/article.html">article</a></li> <li><a style="font-size:148.94814080793086%;" href="https://hackingcpp.com/tags/beginner-level.html">beginner-level</a></li> <li><a style="font-size:60.0%;" href="https://hackingcpp.com/tags/blogs.html">blogs</a></li> <li><a style="font-size:60.0%;" href="https://hackingcpp.com/tags/books.html">books</a></li> <li><a style="font-size:60.0%;" href="https://hackingcpp.com/tags/build-systems.html">build-systems</a></li> <li><a style="font-size:158.77199263879334%;" href="https://hackingcpp.com/tags/c++.html">C++</a></li> <li><a style="font-size:60.0%;" href="https://hackingcpp.com/tags/c++-standardization.html">C++-standardization</a></li> <li><a style="font-size:132.37564348456797%;" href="https://hackingcpp.com/tags/c++11.html">C++11</a></li> <li><a style="font-size:119.93946644113964%;" href="https://hackingcpp.com/tags/c++14.html">C++14</a></li> <li><a style="font-size:119.93946644113964%;" href="https://hackingcpp.com/tags/c++17.html">C++17</a></li> <li><a style="font-size:126.32454246276055%;" href="https://hackingcpp.com/tags/c++20.html">C++20</a></li> <li><a style="font-size:82.36427206485621%;" href="https://hackingcpp.com/tags/c++23.html">C++23</a></li> <li><a style="font-size:92.763066385146%;" href="https://hackingcpp.com/tags/c++98.html">C++98</a></li> <li><a style="font-size:82.36427206485621%;" href="https://hackingcpp.com/tags/c-style.html">C-style</a></li> <li><a style="font-size:60.0%;" href="https://hackingcpp.com/tags/c-vs-c++.html">C-vs-C++</a></li> <li><a style="font-size:60.0%;" href="https://hackingcpp.com/tags/casts.html">casts</a></li> <li><a style="font-size:102.33085398805429%;" href="https://hackingcpp.com/tags/classes.html">classes</a></li> <li><a style="font-size:88.22056932536952%;" href="https://hackingcpp.com/tags/code-editors.html">code-editors</a></li> <li><a style="font-size:82.36427206485621%;" href="https://hackingcpp.com/tags/code-formatting.html">code-formatting</a></li> <li><a style="font-size:82.36427206485621%;" href="https://hackingcpp.com/tags/command-line.html">command-line</a></li> <li><a style="font-size:106.87335104783075%;" href="https://hackingcpp.com/tags/community.html">community</a></li> <li><a style="font-size:60.0%;" href="https://hackingcpp.com/tags/comparisons.html">comparisons</a></li> <li><a style="font-size:88.22056932536952%;" href="https://hackingcpp.com/tags/compilers.html">compilers</a></li> <li><a style="font-size:60.0%;" href="https://hackingcpp.com/tags/concepts.html">concepts</a></li> <li><a style="font-size:74.11028466268476%;" href="https://hackingcpp.com/tags/conferences.html">conferences</a></li> <li><a style="font-size:60.0%;" href="https://hackingcpp.com/tags/const.html">const</a></li> <li><a style="font-size:60.0%;" href="https://hackingcpp.com/tags/constexpr.html">constexpr</a></li> <li><a style="font-size:110.58484139022573%;" href="https://hackingcpp.com/tags/containers.html">containers</a></li> <li><a style="font-size:82.36427206485621%;" href="https://hackingcpp.com/tags/control-flow.html">control-flow</a></li> <li><a style="font-size:60.0%;" href="https://hackingcpp.com/tags/cuda.html">CUDA</a></li> <li><a style="font-size:110.58484139022573%;" href="https://hackingcpp.com/tags/custom-types.html">custom-types</a></li> <li><a style="font-size:74.11028466268476%;" href="https://hackingcpp.com/tags/data-structures.html">data-structures</a></li> <li><a style="font-size:60.0%;" href="https://hackingcpp.com/tags/debugging.html">debugging</a></li> <li><a style="font-size:102.33085398805429%;" href="https://hackingcpp.com/tags/design.html">design</a></li> <li><a style="font-size:104.72854412971242%;" href="https://hackingcpp.com/tags/diagnostics.html">diagnostics</a></li> <li><a style="font-size:74.11028466268476%;" href="https://hackingcpp.com/tags/exceptions.html">exceptions</a></li> <li><a style="font-size:82.36427206485621%;" href="https://hackingcpp.com/tags/file-io.html">file-io</a></li> <li><a style="font-size:60.0%;" href="https://hackingcpp.com/tags/find.html">find</a></li> <li><a style="font-size:82.36427206485621%;" href="https://hackingcpp.com/tags/functional-prog.html">functional-prog</a></li> <li><a style="font-size:88.22056932536952%;" href="https://hackingcpp.com/tags/functions.html">functions</a></li> <li><a style="font-size:60.0%;" href="https://hackingcpp.com/tags/gallery.html">gallery</a></li> <li><a style="font-size:92.763066385146%;" href="https://hackingcpp.com/tags/generic-prog.html">generic-prog</a></li> <li><a style="font-size:60.0%;" href="https://hackingcpp.com/tags/groups.html">groups</a></li> <li><a style="font-size:60.0%;" href="https://hackingcpp.com/tags/guide.html">guide</a></li> <li><a style="font-size:74.11028466268476%;" href="https://hackingcpp.com/tags/guidelines.html">guidelines</a></li> <li><a style="font-size:60.0%;" href="https://hackingcpp.com/tags/hash-map.html">hash-map</a></li> <li><a style="font-size:60.0%;" href="https://hackingcpp.com/tags/hash-set.html">hash-set</a></li> <li><a style="font-size:60.0%;" href="https://hackingcpp.com/tags/hashing.html">hashing</a></li> <li><a style="font-size:60.0%;" href="https://hackingcpp.com/tags/header-files.html">header-files</a></li> <li><a style="font-size:74.11028466268476%;" href="https://hackingcpp.com/tags/heap.html">heap</a></li> <li><a style="font-size:60.0%;" href="https://hackingcpp.com/tags/ides.html">ides</a></li> <li><a style="font-size:92.763066385146%;" href="https://hackingcpp.com/tags/idiom.html">idiom</a></li> <li><a style="font-size:60.0%;" href="https://hackingcpp.com/tags/initialization.html">initialization</a></li> <li><a style="font-size:99.61257709942198%;" href="https://hackingcpp.com/tags/input.html">input</a></li> <li><a style="font-size:102.33085398805429%;" href="https://hackingcpp.com/tags/io.html">io</a></li> <li><a style="font-size:92.763066385146%;" href="https://hackingcpp.com/tags/iostreams.html">iostreams</a></li> <li><a style="font-size:74.11028466268476%;" href="https://hackingcpp.com/tags/iterators.html">iterators</a></li> <li><a style="font-size:60.0%;" href="https://hackingcpp.com/tags/lambda.html">lambda</a></li> <li><a style="font-size:82.36427206485621%;" href="https://hackingcpp.com/tags/language-mechanism.html">language-mechanism</a></li> <li><a style="font-size:60.0%;" href="https://hackingcpp.com/tags/language-references.html">language-references</a></li> <li><a style="font-size:74.11028466268476%;" href="https://hackingcpp.com/tags/learning.html">learning</a></li> <li><a style="font-size:74.11028466268476%;" href="https://hackingcpp.com/tags/libraries.html">libraries</a></li> <li><a style="font-size:74.11028466268476%;" href="https://hackingcpp.com/tags/linker.html">linker</a></li> <li><a style="font-size:128.54749472716261%;" href="https://hackingcpp.com/tags/list.html">list</a></li> <li><a style="font-size:82.36427206485621%;" href="https://hackingcpp.com/tags/low-level.html">low-level</a></li> <li><a style="font-size:60.0%;" href="https://hackingcpp.com/tags/map.html">map</a></li> <li><a style="font-size:108.81356491006457%;" href="https://hackingcpp.com/tags/memory.html">memory</a></li> <li><a style="font-size:137.49161051485842%;" href="https://hackingcpp.com/tags/modern-c++.html">modern-C++</a></li> <li><a style="font-size:74.11028466268476%;" href="https://hackingcpp.com/tags/move-semantics.html">move-semantics</a></li> <li><a style="font-size:140.4348271254453%;" href="https://hackingcpp.com/tags/news.html">news</a></li> <li><a style="font-size:74.11028466268476%;" href="https://hackingcpp.com/tags/oop.html">oop</a></li> <li><a style="font-size:60.0%;" href="https://hackingcpp.com/tags/organizations.html">organizations</a></li> <li><a style="font-size:99.61257709942198%;" href="https://hackingcpp.com/tags/output.html">output</a></li> <li><a style="font-size:60.0%;" href="https://hackingcpp.com/tags/package-manager.html">package-manager</a></li> <li><a style="font-size:92.763066385146%;" href="https://hackingcpp.com/tags/paradigm.html">paradigm</a></li> <li><a style="font-size:60.0%;" href="https://hackingcpp.com/tags/pattern.html">pattern</a></li> <li><a style="font-size:60.0%;" href="https://hackingcpp.com/tags/people.html">people</a></li> <li><a style="font-size:60.0%;" href="https://hackingcpp.com/tags/performance.html">performance</a></li> <li><a style="font-size:60.0%;" href="https://hackingcpp.com/tags/podcasts.html">podcasts</a></li> <li><a style="font-size:60.0%;" href="https://hackingcpp.com/tags/pointers.html">pointers</a></li> <li><a style="font-size:60.0%;" href="https://hackingcpp.com/tags/preprocessor.html">preprocessor</a></li> <li><a style="font-size:60.0%;" href="https://hackingcpp.com/tags/profiling.html">profiling</a></li> <li><a style="font-size:60.0%;" href="https://hackingcpp.com/tags/python.html">Python</a></li> <li><a style="font-size:88.22056932536952%;" href="https://hackingcpp.com/tags/randomness.html">randomness</a></li> <li><a style="font-size:120.98363571051551%;" href="https://hackingcpp.com/tags/ranges.html">ranges</a></li> <li><a style="font-size:92.763066385146%;" href="https://hackingcpp.com/tags/recipe.html">recipe</a></li> <li><a style="font-size:60.0%;" href="https://hackingcpp.com/tags/references.html">references</a></li> <li><a style="font-size:60.0%;" href="https://hackingcpp.com/tags/set.html">set</a></li> <li><a style="font-size:60.0%;" href="https://hackingcpp.com/tags/social-media.html">social-media</a></li> <li><a style="font-size:82.36427206485621%;" href="https://hackingcpp.com/tags/stack.html">stack</a></li> <li><a style="font-size:60.0%;" href="https://hackingcpp.com/tags/standardization.html">standardization</a></li> <li><a style="font-size:118.8388287923972%;" href="https://hackingcpp.com/tags/std-algorithms.html">std-algorithms</a></li> <li><a style="font-size:106.87335104783075%;" href="https://hackingcpp.com/tags/std-containers.html">std-containers</a></li> <li><a style="font-size:132.37564348456797%;" href="https://hackingcpp.com/tags/std-library.html">std-library</a></li> <li><a style="font-size:60.0%;" href="https://hackingcpp.com/tags/std-macros.html">std-macros</a></li> <li><a style="font-size:88.22056932536952%;" href="https://hackingcpp.com/tags/std-vector.html">std-vector</a></li> <li><a style="font-size:131.1778369749208%;" href="https://hackingcpp.com/tags/stl.html">STL</a></li> <li><a style="font-size:74.11028466268476%;" href="https://hackingcpp.com/tags/strings.html">strings</a></li> <li><a style="font-size:60.0%;" href="https://hackingcpp.com/tags/style.html">style</a></li> <li><a style="font-size:60.0%;" href="https://hackingcpp.com/tags/taste.html">taste</a></li> <li><a style="font-size:82.36427206485621%;" href="https://hackingcpp.com/tags/templates.html">templates</a></li> <li><a style="font-size:74.11028466268476%;" href="https://hackingcpp.com/tags/testing.html">testing</a></li> <li><a style="font-size:74.11028466268476%;" href="https://hackingcpp.com/tags/toolchain.html">toolchain</a></li> <li><a style="font-size:116.44113865073903%;" href="https://hackingcpp.com/tags/tools.html">tools</a></li> <li><a style="font-size:74.11028466268476%;" href="https://hackingcpp.com/tags/traversal.html">traversal</a></li> <li><a style="font-size:115.12733845000223%;" href="https://hackingcpp.com/tags/types.html">types</a></li> <li><a style="font-size:60.0%;" href="https://hackingcpp.com/tags/user.html">user</a></li> <li><a style="font-size:60.0%;" href="https://hackingcpp.com/tags/version-control.html">version-control</a></li> <li><a style="font-size:60.0%;" href="https://hackingcpp.com/tags/views.html">views</a></li> <li><a style="font-size:60.0%;" href="https://hackingcpp.com/tags/vim.html">VIM</a></li> <li><a style="font-size:60.0%;" href="https://hackingcpp.com/tags/vim-plugins.html">VIM-plugins</a></li> <li><a style="font-size:60.0%;" href="https://hackingcpp.com/tags/warnings.html">warnings</a></li> <li><a style="font-size:112.21425780007577%;" href="https://hackingcpp.com/tags/websites.html">websites</a></li> 
+</ul></div></div></div>
+<div id="footer-bottom"><div id="footer-bottom-content">©&nbsp;2019-2023 André&nbsp;Müller  </div></div>
+</footer>
+<script src="./C++ Cheat Sheets &amp; Infographics _ hacking C++_files/content-r64.js"></script>
+
+</body></html>
